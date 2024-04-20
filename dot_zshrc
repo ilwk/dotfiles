@@ -1,6 +1,7 @@
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
 [ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+
 source "${ZINIT_HOME}/zinit.zsh"
 
 autoload -Uz _zinit
@@ -12,17 +13,30 @@ zinit ice as"command" from"gh-r" \
   atpull"%atclone" src"init.zsh"
 zinit light starship/starship
 
+# binary release, unpack provide fzf
+zinit ice from"gh-r" as"program"
+zinit light junegunn/fzf
+zinit light Aloxaf/fzf-tab
+
+zinit load agkozak/zsh-z
+
 # zsh 套件四天王
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
-zinit light zsh-users/zsh-history-substring-search
+zinit light zdharma-continuum/history-search-multi-word
+# zinit light zsh-users/zsh-syntax-highlighting
 zinit light zdharma-continuum/fast-syntax-highlighting
+zinit light MichaelAquilina/zsh-you-should-use
 
 # Oh My Zsh 功能
-zinit snippet OMZ::lib/completion.zsh
-zinit snippet OMZ::lib/history.zsh
-zinit snippet OMZ::lib/key-bindings.zsh
-zinit snippet OMZ::lib/theme-and-appearance.zsh
+zinit snippet OMZL::completion.zsh
+zinit snippet OMZL::clipboard.zsh
+zinit snippet OMZL::history.zsh
+zinit snippet OMZL::key-bindings.zsh
+zinit snippet OMZL::theme-and-appearance.zsh
+zinit snippet OMZP::sudo/sudo.plugin.zsh
+zinit snippet OMZP::command-not-found/command-not-found.plugin.zsh
+zinit snippet OMZP::git/git.plugin.zsh
 
 # key binding
 bindkey '^[[A' history-substring-search-up
