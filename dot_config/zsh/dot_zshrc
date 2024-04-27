@@ -1,7 +1,4 @@
-#!/bin/zsh
-#
-# .zshrc - Zsh file loaded on interactive shell sessions.
-#
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # Zsh options.
 setopt extended_glob
@@ -23,3 +20,4 @@ source ${ZDOTDIR:-~}/.antidote/antidote.zsh
 antidote load
 
 autoload -Uz compinit && compinit
+
