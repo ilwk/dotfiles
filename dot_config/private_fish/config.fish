@@ -8,11 +8,3 @@ if test -d /home/linuxbrew/.linuxbrew/bin/brew
 end
 
 starship init fish | source
-
-# pnpm
-set -gx PNPM_HOME "~/.local/share/pnpm"
-if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
-end
-# pnpm end
-
