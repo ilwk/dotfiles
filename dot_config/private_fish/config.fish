@@ -3,8 +3,6 @@ if status is-interactive
 end
 
 # if use brew
-if test -d /home/linuxbrew/.linuxbrew/bin/brew
-  eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-end
+eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
 starship init fish | source
