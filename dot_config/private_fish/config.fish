@@ -3,8 +3,8 @@
 # end
 
 # if use brew
-if command -v brew >/dev/null 2>&1; then
-    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-fi
+if command -v brew >/dev/null
+    eval (brew shellenv)
+end
 
 starship init fish | source
