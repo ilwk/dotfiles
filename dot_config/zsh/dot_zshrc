@@ -1,4 +1,6 @@
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+if command -v brew >/dev/null 2>&1; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
 
 # Zsh options.
 setopt extended_glob
@@ -20,4 +22,3 @@ source ${ZDOTDIR:-~}/.antidote/antidote.zsh
 antidote load
 
 autoload -Uz compinit && compinit
-
