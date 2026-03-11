@@ -1,6 +1,4 @@
-if command -v brew >/dev/null 2>&1; then
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-fi
+source ~/.config/env/init.sh
 
 # Zsh options.
 setopt extended_glob

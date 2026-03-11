@@ -3,14 +3,10 @@
 # end
 
 # if use brew
-if type -q brew
-    eval (brew shellenv)
+if test -x /home/linuxbrew/.linuxbrew/bin/brew
+    eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 end
 
 if type -q starship
     starship init fish | source
-end
-
-if type -q fnm
-    fnm env --use-on-cd --shell fish | source
 end
