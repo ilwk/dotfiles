@@ -20,3 +20,9 @@ Thumbs.db
 
 # Keep empty theme dir
 dot_config/private_fish/themes/*
+
+# Fish auto-generated files
+dot_config/private_fish/fish_variables
+dot_config/private_fish/conf.d/
+dot_config/private_fish/functions/
+dot_config/private_fish/completions/
