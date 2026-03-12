@@ -1,2 +1,22 @@
+# README and license
 LICENSE
 README.md
+
+# chezmoi internal
+.chezmoi*
+!.chezmoiignore
+
+# Editor/IDE
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.sublime-*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Keep empty theme dir
+dot_config/private_fish/themes/*
