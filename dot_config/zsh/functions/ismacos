@@ -1,4 +1,4 @@
 #!/bin/zsh
-#function ismacos {
+# Check if running on macOS
+
 [[ $OSTYPE = *darwin* ]] || return 1
-#}
