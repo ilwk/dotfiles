@@ -1,0 +1,57 @@
+{
+  "preset": "my-mix",
+  "presets": {
+    "my-mix": {
+      "orchestrator": {
+        "model": "opencode-go/qwen3.6-plus",
+        "skills": ["*"],
+        "mcps": ["*"]
+      },
+      "oracle": {
+        "model": "opencode-go/glm-5.1",
+        "variant": "high",
+        "skills": ["simplify"],
+        "mcps": []
+      },
+      "librarian": {
+        "model": "opencode-go/minimax-m2.7",
+        "variant": "low",
+        "skills": [],
+        "mcps": ["websearch", "context7", "grep_app"]
+      },
+      "explorer": {
+        "model": "opencode-go/minimax-m2.7",
+        "variant": "low",
+        "skills": [],
+        "mcps": []
+      },
+      "designer": {
+        "model": "opencode-go/kimi-k2.5",
+        "variant": "medium",
+        "skills": ["agent-browser"],
+        "mcps": []
+      },
+      "fixer": {
+        "model": "opencode-go/minimax-m2.7",
+        "variant": "low",
+        "skills": [],
+        "mcps": []
+      }
+    }
+  },
+  "multiplexer": {
+    "type": "auto",
+    "layout": "main-vertical",
+    "main_pane_size": 60
+  },
+  "council": {
+    "master": { "model": "opencode-go/glm-5.1" },
+    "presets": {
+      "default": {
+        "alpha": { "model": "opencode-go/kimi-k2.5" },
+        "beta": { "model": "opencode-go/qwen3.6-plus" },
+        "gamma": { "model": "opencode-go/mimo-v2-pro" }
+      }
+    }
+  }
+}

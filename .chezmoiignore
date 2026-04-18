@@ -26,3 +26,10 @@ dot_config/private_fish/fish_variables
 dot_config/private_fish/conf.d/
 dot_config/private_fish/functions/
 dot_config/private_fish/completions/
+
+# Opencode - only track config files
+dot_config/opencode/node_modules/
+dot_config/opencode/bun.lock
+dot_config/opencode/opencode.db*
+dot_config/opencode/package.json
+dot_config/opencode/package-lock.json
